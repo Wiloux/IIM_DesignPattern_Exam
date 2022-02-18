@@ -9,8 +9,12 @@ public class EntityFire : MonoBehaviour
 
     public void FireBullet(int power)
     {
-        var b = Instantiate(_bulletPrefab, _spawnPoint.transform.position, Quaternion.identity, null)
-            .Init(_spawnPoint.TransformDirection(Vector3.right), power);
+        var p = BulletPool.Instance.SpawnFromPool("Bullet", _spawnPoint.transform.position, Quaternion.identity);
+        p.GetComponent<Bullet>().Init(_spawnPoint.TransformDirection(Vector3.right), power);
+        //var b = Instantiate(_bulletPrefab, _spawnPoint.transform.position, Quaternion.identity, null)
+        //    .Init(_spawnPoint.TransformDirection(Vector3.right), power);
+   
+    
     }
 
 }

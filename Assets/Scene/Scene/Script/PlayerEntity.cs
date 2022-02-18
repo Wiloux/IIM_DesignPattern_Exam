@@ -14,6 +14,14 @@ public class PlayerEntity : MonoBehaviour
 
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        collision.GetComponentInParent<IObject>()?.PickUp(this);
+    }
+
+
+
 }
 
 

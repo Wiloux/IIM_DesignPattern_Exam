@@ -14,5 +14,17 @@ public class MyToggle : MonoBehaviour, ITouchable
     public void Touch(int power)
     {
         IsActive = !IsActive;
+
+        if (IsActive)
+        {
+            GetComponentInChildren<SpriteRenderer>().color = Color.white;
+            _onToggleOn.Invoke();
+        }
+        else
+        {
+            GetComponentInChildren<SpriteRenderer>().color = Color.black;
+            _onToggleOff.Invoke();
+        }
     }
+
 }

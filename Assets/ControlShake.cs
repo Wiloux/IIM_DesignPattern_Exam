@@ -8,7 +8,8 @@ using UnityEngine;
 public class ControlShake : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera _virtualCamera;
-    [SerializeField] AnimationCurve _shakeCurve;
+    [SerializeField] ControlShakeReference _controlShakeReference;
+    
 
     Coroutine ShakeRoutine { get; set; }
 
@@ -31,11 +32,11 @@ public class ControlShake : MonoBehaviour
         {
             var noise = _virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
             float launchTime = Time.fixedTime;
-            var shakeDuration = _shakeCurve.keys.Last().time;
+            var shakeDuration = _controlShakeReference.shakeCurve.keys.Last().time;
 
             while(Time.fixedTime < launchTime+shakeDuration)
             {
-                noise.m_AmplitudeGain = _shakeCurve.Evaluate(Time.fixedTime - launchTime);
+                noise.m_AmplitudeGain = _controlShakeReference.shakeCurve.Evaluate(Time.fixedTime - launchTime);
                 yield return null;
             }
 

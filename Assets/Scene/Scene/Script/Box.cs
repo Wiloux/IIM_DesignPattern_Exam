@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Box : MonoBehaviour, ITouchable
 {
+    public GameObject potion;
+
     public void Touch(int power)
     {
-        Destroy(gameObject);
+        int rdm = Random.RandomRange(0, 3);
+        if (rdm == 1)
+            Instantiate(potion, transform.position, Quaternion.identity);
+
+            Destroy(gameObject);
     }
 }

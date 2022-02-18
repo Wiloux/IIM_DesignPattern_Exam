@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d71e4768a7395f43b8725434a56f3dd, type: 3}
+  m_Name: ControlShake
+  m_EditorClassIdentifier: 
+  shakeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0041389465
+      value: 1.0061111
+      inSlope: 14.314081
+      outSlope: 14.314081
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.083639644
+    - serializedVersion: 3
+      time: 0.53390706
+      value: 0.0105203595
+      inSlope: -9.419787
+      outSlope: -9.419787
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.036540017
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

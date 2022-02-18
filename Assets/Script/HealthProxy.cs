@@ -32,7 +32,7 @@ public class HealthProxy : MonoBehaviour, IHealth
 
     public void TakeDamage(int amount) => _health.TakeDamage(amount);
 
-    
+    public void  Heal(int amount) => _health.Heal(amount);
 
 
 }
